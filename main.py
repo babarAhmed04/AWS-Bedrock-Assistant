@@ -56,10 +56,11 @@ def main():
     # if accuracy:
     #     st.sidebar.title("Accuracy Metrics")
     #     st.sidebar.write(f"Accuracy: {accuracy:.2f}% based on user feedback.")
-           
+      
     st.markdown("### Conversation History:")
     for entry in reversed(st.session_state['history']):
         st.markdown(f"**{entry.split(': ')[0]}**: {entry.split(': ')[1]}", unsafe_allow_html=True)
+
 
     if st.button("Clear History"):
         st.session_state['history'] = []  
